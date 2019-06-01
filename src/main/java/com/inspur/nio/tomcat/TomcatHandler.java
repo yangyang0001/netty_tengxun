@@ -28,6 +28,43 @@ public class TomcatHandler extends ChannelInboundHandlerAdapter {
     }
 
     @Override
+    public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("handlerAdded");
+        super.handlerAdded(ctx);
+    }
+
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("channelActive");
+        super.channelActive(ctx);
+    }
+
+    @Override
+    public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("channelRegistered");
+        super.channelRegistered(ctx);
+
+    }
+
+    @Override
+    public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("channelUnregistered");
+        super.channelUnregistered(ctx);
+    }
+
+    @Override
+    public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("handlerRemoved");
+        super.handlerRemoved(ctx);
+    }
+
+    @Override
+    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("channelReadComplete");
+        super.channelReadComplete(ctx);
+    }
+
+    @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         super.exceptionCaught(ctx, cause);
     }

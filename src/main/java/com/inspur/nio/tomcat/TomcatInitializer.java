@@ -19,6 +19,7 @@ public class TomcatInitializer extends ChannelInitializer<SocketChannel> {
         channelPipeline.addLast(new HttpRequestDecoder());
         channelPipeline.addLast(new HttpResponseEncoder());
         channelPipeline.addLast(new TomcatHandler());
+        channelPipeline.channel().pipeline();
 
     }
 }
