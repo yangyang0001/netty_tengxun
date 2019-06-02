@@ -11,6 +11,8 @@ public class RPCClient {
 
     public static void main(String[] args){
         SayHelloService sayHelloService = RPCClientProxy.getInstance(SayHelloService.class);
-        System.out.println(sayHelloService.sayHello("YangYang"));
+        for(int i = 0; i < 10; i++){
+            System.out.println(sayHelloService.sayHello("YangYang002"));
+        }
     }
 }

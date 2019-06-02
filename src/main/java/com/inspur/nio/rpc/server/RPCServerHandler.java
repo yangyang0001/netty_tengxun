@@ -27,6 +27,9 @@ public class RPCServerHandler extends ChannelInboundHandlerAdapter {
         ctx.writeAndFlush(result);
     }
 
+    /**
+     * 这个方法必须重写,否则 延迟处理 返回结果!
+     */
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         ctx.flush();

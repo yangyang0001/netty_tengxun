@@ -87,10 +87,6 @@ class MethodProxy implements InvocationHandler{
             group.shutdownGracefully();
         }
 
-        //做延迟操作, 等待 Server 端返回数据!
-        boolean flag;
-        while((flag = handler.getDataFlag()) == false){}
-
         return handler.getObject();
     }
 }
